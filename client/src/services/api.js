@@ -1,6 +1,6 @@
 // This file handles all communication with our backend server
 
-const API_BASE_URL = 'http://127.0.0.1:5000/api';
+const API_BASE_URL = 'https://salesmind-ai-7fkx.onrender.com/api';
 
 // Sends a new conversation to be analyzed
 export const analyzeConversation = async (text) => {

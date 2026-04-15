@@ -102,3 +102,5 @@ This project was built as a practical demonstration of integrating AI into a ful
 License
 
 This project is open-source and available for learning and demonstration purposes.
+This project is open-source and available for learning and demonstration purposes.
+ 5ead660 (Updated API URL for production)
