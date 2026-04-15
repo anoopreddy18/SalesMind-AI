@@ -28,7 +28,7 @@ Suggestions: ${result.suggestions}
     return (
       <ul>
         {items.map((item, idx) => {
-          const cleanItem = item.replace(/^[\-\*]\s*/, '').trim();
+          const cleaned = text.replace(/[-*]/g, "").trim();
           return cleanItem ? <li key={idx}>{cleanItem}</li> : null;
         })}
       </ul>
@@ -37,30 +37,30 @@ Suggestions: ${result.suggestions}
 
   return (
     <div className={hideTitle ? "" : "card"} style={hideTitle ? {} : { marginTop: '24px' }}>
-      
+
       <div className="flex-between" style={{ marginBottom: '24px' }}>
         {!hideTitle && <h3 style={{ margin: 0, fontSize: '1.25rem' }}>AI Report</h3>}
         {hideTitle && <div></div> /* filler if title is hidden */}
-        
+
         <button className="btn btn-outline" onClick={handleCopy} style={{ padding: '6px 12px', fontSize: '0.75rem' }}>
           {copied ? 'Copied!' : 'Copy to Clipboard'}
         </button>
       </div>
-      
+
       <div className="result-section">
         <div className="result-section-title">Sentiment</div>
         <div className="result-section-content">
           <SentimentBadge sentiment={result.sentiment} />
         </div>
       </div>
-      
+
       <div className="result-section">
         <div className="result-section-title">Summary</div>
         <div className="result-section-content" style={{ lineHeight: '1.6' }}>
           {result.summary || 'No summary generated.'}
         </div>
       </div>
-      
+
       <div className="result-section">
         <div className="result-section-title">Key Insights</div>
         <div className="result-section-content">
@@ -81,7 +81,7 @@ Suggestions: ${result.suggestions}
           {formatList(result.suggestions) || <p>Keep up the good work!</p>}
         </div>
       </div>
-      
+
     </div>
   );
 };
