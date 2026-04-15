@@ -28,7 +28,7 @@ Suggestions: ${result.suggestions}
     return (
       <ul>
         {items.map((item, idx) => {
-          const cleaned = text.replace(/[-*]/g, "").trim();
+          const cleanItem = item.replace(/[-*]/g, "").trim();
           return cleanItem ? <li key={idx}>{cleanItem}</li> : null;
         })}
       </ul>
