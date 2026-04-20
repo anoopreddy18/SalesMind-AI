@@ -1,17 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-brand">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--primary)" }}>
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-          </svg>
-          SalesMind AI
-        </div>
+        <Logo />
       </div>
       <div className="sidebar-menu">
         <NavLink 

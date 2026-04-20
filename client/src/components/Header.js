@@ -8,10 +8,7 @@ const Header = ({ title, subtitle }) => {
         {subtitle && <p>{subtitle}</p>}
       </div>
       <div className="header-actions">
-        <div className="header-user">
-           {/* Mock user placeholder */}
-           JD
-        </div>
+        {/* Actions placeholder */}
       </div>
     </header>
   );
