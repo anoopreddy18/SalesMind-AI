@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({ title, subtitle }) => {
+const Header = ({ title, subtitle, children }) => {
   return (
     <header className="top-header">
       <div className="header-title-container">
@@ -8,7 +8,7 @@ const Header = ({ title, subtitle }) => {
         {subtitle && <p>{subtitle}</p>}
       </div>
       <div className="header-actions">
-        {/* Actions placeholder */}
+        {children}
       </div>
     </header>
   );

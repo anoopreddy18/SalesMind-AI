@@ -72,7 +72,7 @@ const Dashboard = () => {
               <h3 style={{ fontSize: '1.25rem', marginBottom: '20px', color: 'var(--text-main)' }}>
                 Recent Conversations
               </h3>
-              {conversations.map(conv => (
+              {conversations.slice(0, 5).map(conv => (
                 <ConversationCard key={conv._id} conversation={conv} />
               ))}
             </div>
